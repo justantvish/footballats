@@ -1,0 +1,52 @@
+// fonts
+$base-font-family: 'Inter', sans-serif;
+$base-font-size: 14px;
+
+// colors
+$black: #101622;
+$pale-blue: #ecf6ff;
+$white: #fff;
+$blue: #2e4b68;
+$blue-light: #a9dbe7;
+$green: #029632;
+$green-light: #92f1cd;
+$gray: #c2c2c2;
+$gray-light: #e1e9eb;
+$gray-lighter: #f4f7f6;
+$gray-dark: #6a6e77;
+$gray-blue: #738296;
+$peach: #feba9d;
+$brown: #9d664e;
+$yellow: #ffd489;
+$gold: #b98b00;
+$sky: #c5d9fc;
+$sky-night: #273e9a;
+
+// color presets
+$main: $green;
+$main-bg: $pale-blue;
+$text-color: $black;
+$link-color: $main;
+
+// status colors
+$pending-color: $brown;
+$pending-bg: $peach;
+$approved-color: $gold;
+$approved-bg: $yellow;
+$offered-color: $sky-night;
+$offered-bg: $sky;
+
+// buttons
+$btn-main-bg: $main;
+$btn-main-bg-hover: lighten($main, 10%);
+$btn-main-color: $white;
+
+$dark-green: #252b25;
+$light-green: #c5d3d0;
+$green-group-text: #5c7567;
+
+// navigation
+$navlink-color: $gray;
+$navlink-color-hover: $main;
+$navlink-bg-hover: $light-green;
+$navlink-group-color: $green-group-text;

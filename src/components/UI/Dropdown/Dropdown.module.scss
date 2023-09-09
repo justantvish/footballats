@@ -1,0 +1,63 @@
+@import '../../../assets/styles/variables';
+
+.wrap {
+    position: relative;
+    background-color: $white;
+    display: inline-block;
+    vertical-align: top;
+
+    i {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 21px;
+        color: $gray-blue;
+    }
+}
+
+.drop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    background-color: $white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.btn {
+    height: 40px;
+    min-width: 220px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+    border: 1px solid $gray;
+    border-radius: 4px;
+    background-color: transparent;
+    z-index: 2;
+    position: relative;
+    font-size: 16px;
+    text-align-last: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 32px 0 12px;
+    white-space: nowrap;
+
+    &:focus {
+        outline: none;
+        border: 1px solid $btn-main-bg;
+    }
+
+    img {
+        max-width: 25px;
+        margin-right: 6px;
+    }
+}

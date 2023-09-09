@@ -1,0 +1,40 @@
+
+@import '../../assets/styles/variables';
+
+.holder {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    white-space: nowrap;
+
+    &.opened {
+        justify-content: space-between;
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    padding-left: 8px;
+}
+
+.name {
+    color: $main;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    
+    &:not(:only-child) {
+        margin-bottom: 6px;
+    }
+}
+
+.company {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: $main;
+}

@@ -1,0 +1,58 @@
+@import '../../../assets/styles/variables';
+
+.btn {
+    transition: background-color .3s ease-in;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    line-height: 1;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    color: $gray;
+    font-weight: 500;
+    font-family: $base-font-family;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $gray-lighter;
+    }
+
+    &.main {
+        background-color: $btn-main-bg;
+        color: $btn-main-color;
+        border-color: $btn-main-bg;
+
+        &:hover {
+            background-color: $btn-main-bg-hover;
+        }
+    }
+
+    i {
+        font-size: 27px;
+        font-weight: 400;
+        font-style: normal;
+        margin-right: 4px;
+    }
+}
+
+.drop {
+    transition: color .3s ease-in;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: $gray-light;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover {
+        color: $gray-blue;
+    }
+}

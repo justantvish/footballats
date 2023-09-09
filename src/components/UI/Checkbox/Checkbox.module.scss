@@ -1,0 +1,59 @@
+@import '../../../assets/styles/variables';
+
+.holder {
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+}
+
+.check {
+    opacity: 0;
+    inset: 0;
+    position: absolute;
+    z-index: 9;
+    margin: 0;
+
+    &:focus ~ .fake {
+        border-color: $main;
+    }
+
+    &:checked ~ .fake {
+        background-color: $main;
+        border-color: $main;
+
+        &:before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.fake {
+    transition: border-color .3s, background-color .3s;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid $gray-light;
+    background-color: $white;
+
+    &:before {
+        transition: opacity .3s, visibility .3s;
+        content: '';
+        height: 10px;
+        width: 6px;
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        transform-origin: center;
+        transform: rotate(45deg);
+        margin-bottom: 2px;
+        opacity: 0;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../assets/styles/variables';
+
+.link {
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    line-height: 1;
+    font-size: 15px;
+    font-weight: 500;
+    color: $navlink-color;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 100%;
+
+    &.active,
+    &:hover,
+    &:focus {
+        background-color: $navlink-bg-hover;
+        color: $navlink-color-hover;
+    }
+
+    i {
+        line-height: 1;
+        font-size: 20px;
+        font-style: normal;
+        min-width: 20px;
+        color: $main;
+    }
+}
+
+.text {
+    padding-left: 8px;
+}
+
+.nav {
+
+    &:not(.opened) {
+        
+        .link {
+            justify-content: center;
+            width: 40px;
+            margin: 0 auto;
+        }
+    }
+}

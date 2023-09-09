@@ -1,0 +1,17 @@
+@import '../../../assets/styles/variables';
+
+.holder {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background-color: $white;
+    z-index: 2;
+    min-width: 200px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 0 7px rgba($gray-blue,.4);
+}

@@ -1,0 +1,11 @@
+.content {
+    transition: width .2s;
+    width: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &.opened {
+        width: calc(100% - 264px);
+    }
+}

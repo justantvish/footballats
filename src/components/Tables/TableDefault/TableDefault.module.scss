@@ -1,0 +1,79 @@
+@import '../../../assets/styles/variables';
+
+.table {
+    display: inline-grid;
+    grid-template-rows: auto;
+    position: relative;
+    border-radius: 4px;
+    width: auto;
+}
+
+.holder {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.row {
+    display: contents;
+}
+
+.cell_base {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.cell {
+    @extend .cell_base;
+    height: 50px;
+    font-size: 14px;
+    color: $text-color;
+    border-bottom: 1px solid $gray-light;
+}
+
+.cellhead {
+    @extend .cell_base;
+    background-color: $gray-dark;
+    text-transform: uppercase;
+    color: $white;
+    height: 60px;
+    font-size: 12px;
+    position: sticky;
+    z-index: 3;
+    top: -24px;
+}
+
+.subrow {
+    grid-column: 1/-1;
+    padding: 16px 30px;
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 16px;
+}
+
+.btn_expand {
+    transition: transform .3s ease-in;
+    transform: rotate(0deg);
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 18px;
+    height: 16px;
+    width: 16px;
+    min-width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+    color: $gray;
+    cursor: pointer;
+
+    &.expanded {
+        transform: rotate(180deg);
+    }
+}
+
+:global(.icon-sort) {
+    margin-left: 4px;
+    font-size: 12px;
+}
