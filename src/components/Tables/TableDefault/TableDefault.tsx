@@ -68,7 +68,7 @@ const TableDefault: React.FC<tableProps> = ({tableData, tableColumns, dataLoadin
       ),
     },
     ...tableColumns
-  ], []);
+  ], [tableColumns]);
 
   const table = useReactTable({
     data,
