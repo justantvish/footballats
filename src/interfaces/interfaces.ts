@@ -14,6 +14,10 @@ export interface PlayersTableObj extends TableDataObj {
   player_number?: string | number;
   player_birthdate?: string | Date;
   player_image?: string;
+  player_age?: string | number;
+  player_match_played?: string | number;
+  player_dribble_attempts?: string | number;
+  player_rating?: string | number;
 }
 
 export interface NavItemObj {

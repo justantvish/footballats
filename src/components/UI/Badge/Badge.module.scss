@@ -17,41 +17,41 @@
     white-space: nowrap;
 
     &:global.Forwards {
-        color: $pending-color;
-        background-color: $pending-bg;
+        color: $fw-color;
+        background-color: $fw-bg;
 
         &:before {
-            background-color: $pending-color;
+            background-color: $fw-color;
             display: block;
         }
     }
 
     &:global.Defenders {
-        color: $approved-color;
-        background-color: $approved-bg;
+        color: $df-color;
+        background-color: $df-bg;
 
         &:before {
-            background-color: $approved-color;
+            background-color: $df-color;
             display: block;
         }
     }
 
     &:global.Midfielders {
-        color: $offered-color;
-        background-color: $offered-bg;
+        color: $m-color;
+        background-color: $m-bg;
 
         &:before {
-            background-color: $offered-color;
+            background-color: $m-color;
             display: block;
         }
     }
 
     &:global.Goalkeepers {
-        color: $offered-color;
-        background-color: $offered-bg;
+        color: $gk-color;
+        background-color: $gk-bg;
 
         &:before {
-            background-color: $offered-color;
+            background-color: $gk-color;
             display: block;
         }
     }

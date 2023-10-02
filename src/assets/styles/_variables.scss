@@ -15,12 +15,6 @@ $gray-light: #e1e9eb;
 $gray-lighter: #f4f7f6;
 $gray-dark: #6a6e77;
 $gray-blue: #738296;
-$peach: #feba9d;
-$brown: #9d664e;
-$yellow: #ffd489;
-$gold: #b98b00;
-$sky: #c5d9fc;
-$sky-night: #273e9a;
 
 // color presets
 $main: $green;
@@ -28,13 +22,15 @@ $main-bg: $pale-blue;
 $text-color: $black;
 $link-color: $main;
 
-// status colors
-$pending-color: $brown;
-$pending-bg: $peach;
-$approved-color: $gold;
-$approved-bg: $yellow;
-$offered-color: $sky-night;
-$offered-bg: $sky;
+// position colors
+$gk-color: #9d4e4e;
+$gk-bg: #fe9d9d;
+$df-color:#b96f00;
+$df-bg: #f0b593;
+$fw-color: #1b4883;
+$fw-bg: #789dec;
+$m-color: #138035;
+$m-bg: #80df95;
 
 // buttons
 $btn-main-bg: $main;
