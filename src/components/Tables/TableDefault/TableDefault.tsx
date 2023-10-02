@@ -7,7 +7,7 @@ import {
   ExpandedState,
   getExpandedRowModel,
   getSortedRowModel,
-  SortingState
+  SortingState,
 } from '@tanstack/react-table';
 import Checkbox from 'components/UI/Checkbox/Checkbox';
 import Card from 'components/UI/Card/Card';
@@ -20,9 +20,10 @@ type tableProps = {
   dataLoading?: Boolean;
   tableColsWidth: string[];
   error?: any;
+  expandableRowData: (row: any) => any;
 };
 
-const TableDefault: React.FC<tableProps> = ({tableData, tableColumns, dataLoading, tableColsWidth}) => {
+const TableDefault: React.FC<tableProps> = ({tableData, tableColumns, dataLoading, tableColsWidth, expandableRowData}) => {
   const [data, setData] = useState<TableDataObj[]>([]);
   const [expanded, setExpanded] = useState<ExpandedState>({});
   const [sorting, setSorting] = React.useState<SortingState>([]);
@@ -120,23 +121,23 @@ const TableDefault: React.FC<tableProps> = ({tableData, tableColumns, dataLoadin
                 <>
                 {table.getRowModel().rows.map(row => (
                     <React.Fragment key={row.id}>
-                    <div className={classes.row}>
-                        {row.getVisibleCells().map(cell => (
-                        <div
-                          className={classes.cell}
-                          key={cell.id}
-                        >
-                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        <div className={classes.row}>
+                            {row.getVisibleCells().map(cell => (
+                            <div
+                            className={classes.cell}
+                            key={cell.id}
+                            >
+                                {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                            </div>
+                            ))}
                         </div>
-                        ))}
-                    </div>
-                    {row.getIsExpanded() ? (
-                        <div className={classes.subrow}>
-                          <div>
-                            {row.original.player_image !== '' && <img onLoad={() => console.log('Loaded')} onError={() => console.log('Error')} src={row.original.player_image} alt={row.original.player_name} />}
-                          </div>
-                        </div>
-                    ) : null}
+                        {row.getIsExpanded() ? (
+                            <div className={classes.subrow}>
+                                <div>
+                                    {expandableRowData(row)}
+                                </div>
+                            </div>
+                        ) : null}
                     </React.Fragment>
                 ))}
                 </>

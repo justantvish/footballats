@@ -12,13 +12,12 @@ const Dropdown: React.FC<DropProps> = ({ children, curVal, dropOpened, onClick }
 
     const btnHandler = () => {
         onClick();
-        console.log(curVal)
     };
 
     return(
         <div className={classes.wrap}>
             <button className={classes.btn} onClick={btnHandler}>
-                <img src={curVal?.logo} alt={curVal?.name} onLoad={() => console.log('Loaded')} onError={() => console.log('Error')} />
+                <img src={curVal?.logo} alt={curVal?.name} />
                 {curVal.name}
             </button>
             <div className={dropOpened ? `${classes.drop} ${classes.opened}` : classes.drop}>
