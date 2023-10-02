@@ -90,7 +90,6 @@ const TableCustom = () => {
 
     const {data: dataLeague}: fetchResponse = useFetch(`https://apiv3.apifootball.com/?action=get_teams&league_id=${leagueId}&APIkey=fa12ee062400a33e97bd4cb515f2f80eaa100cc027661407585d75e39574768f`);
     const {data, loading}: fetchResponse = useFetch("https://apiv3.apifootball.com/?action=get_teams&team_id=84&APIkey=fa12ee062400a33e97bd4cb515f2f80eaa100cc027661407585d75e39574768f");
-    const {data: dataEPL}: fetchResponse = useFetch("https://apiv3.apifootball.com/?action=get_standings&league_id=152&APIkey=fa12ee062400a33e97bd4cb515f2f80eaa100cc027661407585d75e39574768f");
     let teamSelected: any;
     let tableData: any;
     let teamId: any;
