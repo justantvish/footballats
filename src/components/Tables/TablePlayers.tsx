@@ -2,12 +2,11 @@ import { useState } from 'react';
 import { useFetch, fetchResponse } from '../../hooks/useFetch';
 import { PlayersTableObj } from '../../interfaces/interfaces';
 import { createColumnHelper } from '@tanstack/react-table';
-
 import TableDefault from './TableDefault/TableDefault';
 import Badge from '../UI/Badge/Badge';
 import Avatar from 'components/UI/Avatar/Avatar';
-
 import { AVATAR_COLORS } from 'constants/colors';
+import { getAvatarColor } from 'utils/getAvatarColors';
 import MainTools from 'layouts/MainTools/MainTools';
 import DropdownTeams from 'components/DropdownTeams/DropdownTeams';
 
@@ -30,7 +29,7 @@ const columns = [
             <>
                 <Avatar
                     val={props.getValue()}
-                    style={{backgroundColor: AVATAR_COLORS[(Math.floor(Math.random() * (AVATAR_COLORS.length)))]}}
+                    style={{backgroundColor: getAvatarColor(props.getValue())}}
                 />
                 <span>{props.getValue()}</span>
             </>
